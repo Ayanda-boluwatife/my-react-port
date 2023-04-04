@@ -1,6 +1,4 @@
-import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import AsideBar from './Components/AsideBar';
 import styled from 'styled-components';
 import MainPort from './Components/MainPort';
 
@@ -10,8 +8,7 @@ function App() {
       <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<AsideBar />}/>
-          <Route path="/main_port" element={<MainPort />}/>
+          <Route path="/" element={<MainPort />}/>
         </Routes>
       </BrowserRouter>
     </div>
@@ -25,12 +22,9 @@ const Wrapper = styled.section`
   height: 100vh;
   width:100%;
   position: relative;
-  .App{
-    background-color: black;
-    height: 100vh;
-    width:100%;
-    opacity: 0.6;
-    position: absolute;
-  }
+  font-family: 'serif';
+  
+
+  
 `
 export default App;
