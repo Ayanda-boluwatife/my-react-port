@@ -16,13 +16,7 @@ function App() {
   );
 }
 const Wrapper = styled.section`
-  background-image: url("./img/hero-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  width:100%;
-  position: relative;
-  font-family: 'serif';
+ 
   
 
   

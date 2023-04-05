@@ -3,30 +3,38 @@ import Hero from './Hero'
 import styled from 'styled-components'
 import AsideBar from './AsideBar'
 import About from './About'
+import Service from './Service'
 
 const MainPort = () => {
   return (
     <Wrapper className='App'>
-      <div>
+      <div className='aside'>
         <AsideBar />
       </div>
       <div>
         <Hero />
         <About />
+        <Service />
       </div>
     </Wrapper>
   )
 }
 const Wrapper = styled.section`
 display: flex;
-width: 100%;
+background: gray;
+  position: absolute;
+  font-family: 'serif';
+  padding-left: 50px;
+  padding-right: 50px;
   
-
+.aside{
+  position: fixed;
+}
   .App{
     background-color: black;
     display: flex;
     height: 100vh;
-    width:100%;
+    width: 100%;
     opacity: 0.6;
     position: absolute;
   }

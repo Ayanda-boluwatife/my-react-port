@@ -23,7 +23,7 @@ const AsideBar = () => {
         <div className='port'>
           <ol>
             <Fade left>
-              <Link> <li> Home  <FaHome /></li></Link>
+              <Link> <li className='active'> Home  <FaHome /></li></Link>
               <Link> <li>  About  <ImProfile/></li></Link>
               <Link><li>Experience  <BsFillStarFill /></li></Link>
               <Link><li>Service  <SiServerless /></li></Link>
@@ -53,18 +53,17 @@ const AsideBar = () => {
 }
 const Wrapper = styled.section`
 background-color: white;
+opacity: 0.7;
 height: 100vh;
-/* width: 22%; */
 overflow: hidden;
 display: flex;
-justify-content: center;
 align-items: center;
+z-index: 1000;
 
 
   .port-image img{
     height: 200px;
-    width: 95%;
-    padding-left: 10px;
+    width: 100%;
   }
 
   .port a{
@@ -82,6 +81,23 @@ align-items: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: ease-in-out .5s;
+  }
+
+  li:hover{
+    background-color: gray;
+    color: black;
+    transition: ease-in-out .5s;
+
+    svg{
+      color: white;
+      transition: ease-in-out .5s;
+    }
+  }
+
+  .active{
+    background-color:gray;
+    color: black;
   }
 
   ol{
